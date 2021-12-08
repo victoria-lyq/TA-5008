@@ -26,7 +26,7 @@ void dfs(graph_t* g, graph_node_t* currNode){
     while (currOutNeighbor != NULL) {
         graph_node_t* outNeighborGraphNode = currOutNeighbor->data;
         if (outNeighborGraphNode->visited = 0){
-            dfs_helper(g, outNeighborGraphNode);
+            dfs(g, outNeighborGraphNode);
         }
         currOutNeighbor = currOutNeighbor -> next;
     }
